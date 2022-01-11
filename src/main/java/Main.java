@@ -36,7 +36,8 @@ public class Main {
             System.out.println("Menu : ");
             System.out.println("Vælg mellem tallene 1 og 2, for at fortsætte");
             System.out.println("1) Søg efter folk på listen med fulde navn og fødselsdato");
-            System.out.println("2) Afslut");
+            System.out.println("2) Se PEP-listen");
+            System.out.println("3) Afslut");
             selection = sc.nextInt();
             switch (selection) {
                 case 1:
@@ -62,14 +63,17 @@ public class Main {
                     if (!nameExist) {
                         System.out.println("Denne person findes ikke på PEP-Listen");
                         System.out.println("Vil du fortsætte? Indtast Ja / Nej");
-                        Scanner sc1 = new Scanner(System.in);
-                        if (sc1.next().equalsIgnoreCase("nej"))
+                        Scanner sc2 = new Scanner(System.in);
+                        if (sc2.next().equalsIgnoreCase("nej"))
                             exit = true;
                         break;
                     }
 
 
                 case 2:
+                    System.out.println(names);
+
+                case 3:
                     exit = true;
                     break;
             }
