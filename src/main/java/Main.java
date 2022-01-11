@@ -33,9 +33,9 @@ public class Main {
         boolean exit = false;
         boolean nameExist = false;
         while (!exit) {
-            System.out.println("Menu : ");
-            System.out.println("Vælg mellem tallene 1 og 2, for at fortsætte");
-            System.out.println("1) Søg efter folk på listen med fulde navn og fødselsdato");
+            System.out.println("");
+            System.out.println("Vælg et af følgende muligheder, for at fortsætte");
+            System.out.println("1) Søg efter folk på PEP-listen med fulde navn og fødselsdato");
             System.out.println("2) Se PEP-listen");
             System.out.println("3) Afslut");
             selection = sc.nextInt();
@@ -68,14 +68,17 @@ public class Main {
                             exit = true;
                         break;
                     }
+                    break;
 
 
                 case 2:
                     System.out.println(names);
+                    break;
 
                 case 3:
                     exit = true;
                     break;
+
             }
         }
     }
