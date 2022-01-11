@@ -8,24 +8,24 @@ public class Main {
     public static void main(String[] args) {
 
         ArrayList<String> names = new ArrayList<>();
-        names.add("Mette Frederiksen");
-        names.add("Jeppe Kofod");
-        names.add("Nick  Hækkerup");
-        names.add("Nicolai Halby Wammen");
-        names.add("Trine Bramsen");
-        names.add("Astrid Krag");
-        names.add("Flemming Møller Mortensen");
-        names.add("Peter  Hummelgaard");
-        names.add("Mattias Tesfaye");
-        names.add("Jesper Petersen");
-        names.add("Dan Jørgensen");
-        names.add("Morten Bødskov");
-        names.add("Pernille Rosenkrantz-Theil");
-        names.add("Ane Halsboe-Jørgensen");
-        names.add("Benny Engelbrecht");
-        names.add("Kaare Dybvad Bek");
-        names.add("Magnus Johannes Heunicke");
-        names.add("Lea  Wermelin");
+        names.add("Mette Frederiksen 19.11.1977");
+        names.add("Jeppe Kofod 14.03.1974");
+        names.add("Nick  Hækkerup 03.04.1968");
+        names.add("Nicolai Halby Wammen 07.02.1971 ");
+        names.add("Trine Bramsen 26.03.1981 ");
+        names.add("Astrid Krag 17.11.1982 ");
+        names.add("Flemming Møller Mortensen 03.07.1963 ");
+        names.add("Peter  Hummelgaard 17.01.1983");
+        names.add("Mattias Tesfaye 31.03.1981");
+        names.add("Jesper Petersen 25.08.1981");
+        names.add("Dan Jørgensen 12.06.1975");
+        names.add("Morten Bødskov 01.05.1970");
+        names.add("Pernille Rosenkrantz-Theil 17.01.1977");
+        names.add("Ane Halsboe-Jørgensen 04.05.1983");
+        names.add("Benny Engelbrecht 04.08.1970");
+        names.add("Kaare Dybvad Bek 05.08.1984");
+        names.add("Magnus Johannes Heunicke 28.01.1975");
+        names.add("Lea  Wermelin 10.05.1985");
 
 
         Scanner sc = new Scanner(System.in);
@@ -35,18 +35,18 @@ public class Main {
         while (!exit) {
             System.out.println("Menu : ");
             System.out.println("Vælg mellem tallene 1 og 2, for at fortsætte");
-            System.out.println("1) Søg efter folk på listen med fulde navn");
+            System.out.println("1) Søg efter folk på listen med fulde navn og fødselsdato");
             System.out.println("2) Afslut");
             selection = sc.nextInt();
             switch (selection) {
                 case 1:
                     Scanner myObj = new Scanner(System.in);  // Create a Scanner object
-                    System.out.println("Indtast fulde navn");
+                    System.out.println("Indtast fulde navn samt fødselsdato");
                     String nameSearch = myObj.nextLine();  // Read user input
 
                     for (int z = 0; z < names.size(); z++) {
                         if (StringUtils.equalsIgnoreCase(nameSearch, names.get(z))) {
-                            System.out.println("Navnet findes på PEP-listen");
+                            System.out.println("Denne person er PEP-listet");
 
                             nameExist = true;
 
@@ -60,7 +60,7 @@ public class Main {
                     }
 
                     if (!nameExist) {
-                        System.out.println("Dette navn findes ikke på PEP-Listen");
+                        System.out.println("Denne person findes ikke på PEP-Listen");
                         System.out.println("Vil du fortsætte? Indtast Ja / Nej");
                         Scanner sc1 = new Scanner(System.in);
                         if (sc1.next().equalsIgnoreCase("nej"))
