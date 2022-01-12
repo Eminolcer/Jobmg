@@ -11,7 +11,7 @@ public class NonExisting {
 
         boolean nameexistin = false;
         for (int z = 0; z < names.size(); z++) {
-            if (StringUtils.equalsIgnoreCase("Emin Olcer 01.16.2001", names.get(z))) {
+            if (StringUtils.equalsIgnoreCase("Mads Mikkelsen 22.11.1965", names.get(z))) {
                 System.out.println("Denne person er PEP-listet");
                 nameexistin = true;
 
