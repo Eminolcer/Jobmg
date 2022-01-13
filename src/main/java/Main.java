@@ -25,6 +25,7 @@ public class Main {
                 case 1:
                     Scanner myObj = new Scanner(System.in);  // Create a Scanner object
                     System.out.println("Indtast fulde navn samt fødselsdato");
+                    System.out.println("Opstillingen skal se således ud: fulde navn og dd.mm.yyyy");
                     String nameSearch = myObj.nextLine();  // Read user input
 
                     for (int z = 0; z < names.size(); z++) {
@@ -59,6 +60,10 @@ public class Main {
                     exit = true;
                     break;
 
+
+                default:
+                    System.out.println("Du bedes vælge et tal mellem 1-3");
+                    break;
             }
         }
     }
